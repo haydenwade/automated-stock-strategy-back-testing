@@ -27,9 +27,9 @@ const getDataForTicker = async (ticker, date) => {
         console.log(err);
     }
 }
-const getLast30Days = async (ticker, numLastDays=0) => {
+const getLast30Days = async (ticker, singleDay=false) => {
     let todaysDate = moment();
-    let days = 31 - numLastDays;
+    let days = 0;
     while (days < 31) {
         const dateStr = todaysDate.format('L');
         const date = dateStr.substr(6, 4) + dateStr.substr(0, 2) +  dateStr.substr(3, 2);//YYYYMMDD
@@ -45,8 +45,8 @@ const main = async () => {
     try {
         const tickers = ['aapl','tsla','amzn','fb','msft','cgc','cron','nflx','wmt'];
         for (let i = 0; i < tickers.length; i++) {
-            // await getLast30Days(tickers[i]);
-            await getLast30Days(tickers[i],31);//could pass num days instead of true false
+            await getLast30Days(tickers[i]);
+            // await getLast30Days(tickers[i],true);//could pass num days instead of true false
             console.log('completed: ' + tickers[i]);
         }
     }
