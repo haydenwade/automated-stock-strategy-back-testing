@@ -14,3 +14,11 @@
 - plotly
     - used for graphing data
 
+## Running Data Fetcher
+`node saveStockData`
+
+## Running Trade Sim
+`node index`
+
+## Sample Graph
+https://plot.ly/~haydenwade/0/
