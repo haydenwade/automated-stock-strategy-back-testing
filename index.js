@@ -71,18 +71,3 @@ const main = async () => {
     }
 };
 main();
-
-/*https://docs.quandl.com/docs/parameters-2
-const result = await rp({
-    method:'GET',
-    json: true,
-    uri:`https://www.quandl.com/api/v3/datasets/EOD/AAPL.json`,
-    qs:{
-        api_key: config.stocksApiKey,
-        start_date: '2019-02-04',
-        end_date: '2019-02-05',
-        order: 'asc',
-
-    }
-});
-*/

@@ -11,4 +11,6 @@
 - quick node.js app to save data from iex trading api
     - iex trading only has last trailing 30 days 
     - tickers currently saving data for: ['aapl','tsla','amzn','fb','msft','cgc','cron','nflx','wmt']
+- plotly
+    - used for graphing data
 
